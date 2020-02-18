@@ -191,7 +191,11 @@ def get_cognitive_incidents(config, logger):
     # initializes the Requests session
     api_session = requests.Session()
     # performs the POST request to login
-    response = api_session.request("POST", url, verify=False, data=login_request_data)
+    try:
+        response = api_session.request("POST", url, verify=False, data=login_request_data)
+    except requests.exceptions.RequestException as e:
+        _print_message(logger, "Unable to communicate with the Stealthwatch SMC.", error=e)
+        sys.exit()
     # If the login was successful
     if (response.status_code == 200):
         # gets the list of Cognitive Intelligence incidents from the SMC
@@ -310,7 +314,7 @@ def send_udp_alert(config, data, logger):
                                                                config["SYSLOG"]["PORT"], data))
     # if an error occurs sending the UDP syslog
     except Exception as e:
-        _print_message(logger, "Error: Unable to send UDP alert.", error=e)
+        _print_message(logger, "Unable to send UDP alert.", error=e)
 
 
 '''
