@@ -3,8 +3,8 @@
 """
 This script will get Cognitive Intelligence incidents from a Stealthwatch Enterprise SMC and send them as syslog.
 
-For more information on these API, please visit:
-https://developer.cisco.com/stealthwatch/
+For more information on these APIs, please visit:
+https://developer.cisco.com/docs/stealthwatch/enterprise/
 
  -
 
@@ -56,7 +56,7 @@ def _initialize_logger():
     log_directory = "{}/logs".format(os.path.dirname(os.path.abspath(__file__)))
     if not os.path.isdir(log_directory):
         os.mkdir(log_directory)
-    log_file = 'stealthwatch-enterprise-cognitive-to-syslog.log'
+    log_file = 'cognitive-intelligence-syslog-exporter.log'
     log_path = os.path.join(log_directory, log_file)
     # creates the log handler
     handler = logging.handlers.RotatingFileHandler(log_path, maxBytes=10 * 1024 * 1024, backupCount=5)
