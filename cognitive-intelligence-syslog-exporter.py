@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-This script will get Conginitive Intelligence incidents from a Stealthwatch Enterprise SMC and send them as syslog.
+This script will get Cognitive Intelligence incidents from a Stealthwatch Enterprise SMC and send them as syslog.
 
 For more information on these API, please visit:
 https://developer.cisco.com/stealthwatch/
