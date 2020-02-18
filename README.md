@@ -1,5 +1,5 @@
 # Cognitive Intelligence Syslog Exporter
-This script will get Cognitive Intelligence incidents from a Stealthwatch Enterprise SMC and send them as syslog to a specified destination. It is designed to be run as a cronjob, to ensure new alerts and updates are constantly being pushed to the destinations. On the initial run, it will the last 1000 events and record the time the script was run. After that, it will only pull events that are new or modified since the previous run's timestamp.
+This script will get Cognitive Intelligence incidents from a Stealthwatch Enterprise SMC and send them as syslog to a specified destination. It is designed to be run as a cronjob, to ensure new alerts and updates are constantly being pushed to the destinations. On the initial run, it will fetch the last 1000 events and record the time the script was run. After that, it will only pull events that are new or modified since the previous run's timestamp.
 
 This script is available for use by the Cisco DevNet community through Code Exchange. For more information on the Stealthwatch Enterprise REST API, please see the following link: https://developer.cisco.com/docs/stealthwatch/enterprise/
 
