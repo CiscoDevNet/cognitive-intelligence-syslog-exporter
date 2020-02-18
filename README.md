@@ -7,7 +7,7 @@ This script is available for use by the Cisco DevNet community through Code Exch
 1. Python 3.x
     - Additional python modules required, please see [requirements.txt](requirements.txt) for details
 2. Stealthwatch Enterprise v7.1.0 or higher
-    - Updates files and documentation can be found in the Network Visibility and Segementation product category on [software.cisco.com](https://software.cisco.com/download/home/286307082)
+    - Update files and documentation can be found in the Network Visibility and Segementation product category on [software.cisco.com](https://software.cisco.com/download/home/286307082)
 3. Stealthwatch user credentials with the "Master Admin" role assigned
     - User roles are configured in the Stealthwatch web interface... simply navigate to `Global Settings -> User Management`
 
