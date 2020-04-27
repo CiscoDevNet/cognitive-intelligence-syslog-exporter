@@ -35,11 +35,15 @@ PORT = (The port to send the UDP syslog to)
 
 #### **Cognitive Intelligence Incidents API Configuration**
 The Cognitive Intelligence Incidents REST API is disabled by default. To enable the API:
-
 * Enable Cognitive Analytics in External Services on your SMC and Flow Collector(s)
-* Locate `/lancope/tomcat/webapps/cta-events-collector/WEB-INF/classes/app.properties` file on your SMC system
-* Under `#CTA_ENABLED` section set the `cta.api.enabled` option to `true`
-* Restart web server on your SMC system: `systemctl restart lc-tomcat`
+* For Stealthwatch Enterprise v7.1.x:
+    * Locate `/lancope/tomcat/webapps/cta-events-collector/WEB-INF/classes/app.properties` file on your SMC system
+    * Under `#CTA_ENABLED` section set the `cta.api.enabled` option to `true`
+    * Restart web server on your SMC system: `systemctl restart lc-tomcat`
+* For Stealthwatch Enterprise v7.2.0 or newer:
+    * Run `cd /lancope/manifests`
+    * Locate `docker-compose.prod.yml` file, search for `cta.api.enabled` option and change it to `true`
+    * From within same directory run `docker-compose down` and then `docker-compose up -d`
 
 ## Usage
 1. Identify the path to your Python 3 executible
