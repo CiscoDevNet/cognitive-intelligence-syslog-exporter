@@ -4,4 +4,4 @@ idna==2.8
 pycrypto==2.6.1
 requests==2.22.0
 six==1.14.0
-urllib3==1.25.8
+urllib3==1.26.5
